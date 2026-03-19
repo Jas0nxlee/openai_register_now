@@ -1,5 +1,10 @@
 # OpenAI 自动注册脚本 (Cloudflare Worker 验证码方案)
 
+> [!IMPORTANT]
+> 🤖 **本项目对 AI Agent 极度友好！** 
+> 
+> 如果你是编程零基础小白，**强烈建议你直接将本项目链接或从头到尾完整的 README 文字发给 AI 智能体代码助手**（例如 `Claude Code` / `Cursor` / `Antigravity` / `OpenCode` / `Trae` 等）。它们不仅能完美读懂本指南，更能**全自动**地在你的电脑上手把手帮你完成所有的代码部署、环境配置与注册脚本运行！
+
 本项目是一个高度自动化、无需配置传统 IMAP 邮箱的 OpenAI 账户批量注册与 Token 获取工具。
 
 通过使用 **Cloudflare Email Routing + Cloudflare Worker + KV** 方案，彻底解决了传统接码平台和自建邮箱繁琐的 IMAP 收信问题，实现极速提取验证码（OTP）。
