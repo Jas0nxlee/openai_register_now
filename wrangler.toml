@@ -11,9 +11,9 @@ compatibility_date = "2024-01-01"
 # 然后将生成的 id 填入下方 id 字段
 [[kv_namespaces]]
 binding = "OTP_STORE"
-id = "b00418afd040450182bec011393f24bf"
+id = "your_kv_namespace_id_here"
 # preview_id 仅 wrangler dev 本地调试时使用（可与 id 相同）
-preview_id = "b00418afd040450182bec011393f24bf"
+preview_id = "your_kv_namespace_id_here"
 
 # ===== Secret 变量 =====
 # WORKER_API_KEY 通过 Secret 注入，不要写在此文件中
