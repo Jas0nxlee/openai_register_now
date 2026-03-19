@@ -1,0 +1,28 @@
+# Cloudflare Worker 配置文件
+# 使用前请先运行: wrangler login
+# 部署命令: wrangler deploy
+
+name = "otpstore"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# ===== KV Namespace 绑定 =====
+# 步骤：在 Cloudflare Dashboard → Workers & Pages → KV 中创建一个名为 OTP_STORE 的 Namespace
+# 然后将生成的 id 填入下方 id 字段
+[[kv_namespaces]]
+binding = "OTP_STORE"
+id = "b00418afd040450182bec011393f24bf"
+# preview_id 仅 wrangler dev 本地调试时使用（可与 id 相同）
+preview_id = "b00418afd040450182bec011393f24bf"
+
+# ===== Secret 变量 =====
+# WORKER_API_KEY 通过 Secret 注入，不要写在此文件中
+# 设置方式: wrangler secret put WORKER_API_KEY
+# 然后输入你自己随机生成的字符串（如 openssl rand -hex 32 的输出）
+
+# ===== 路由（可选） =====
+# 如果你希望通过自己的域名访问 Worker，取消下面的注释并填写
+# [env.production]
+# routes = [
+#   { pattern = "mail-otp.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
